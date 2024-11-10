@@ -1,0 +1,40 @@
+.profile-img img {
+    width: 15rem;
+    border-radius: 25px;
+
+}
+
+.profile-img {
+    display: flex;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 45rem;
+    border-radius: 25px;
+    background-color: var(--g);
+}
+
+.info {
+    line-height: 2.7rem;
+
+}
+
+.cv {
+    margin-top: 1rem;
+}
+
+.cv button {
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 15px;
+    background-color: var(--p1);
+    color: white;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}

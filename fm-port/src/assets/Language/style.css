@@ -1,0 +1,11 @@
+.lang1{
+    width: 4rem;
+    height: 2rem;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px ;
+    background-color: var(--p1);
+    color: var(--w);
+  
+}

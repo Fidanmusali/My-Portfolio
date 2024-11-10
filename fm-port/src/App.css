@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: var(--w);
+
+}
+
+
+
+:root {
+    --b: #000000;
+    --g: #1E1E1E;
+    --p1: #924DBF;
+    --p2: #2D2836;
+    --w: #fff;
+
+}
+
+
+.main-about-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+}
+
+.about-contact {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.skill-edu{
+    display: flex;
+    gap:4rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.skill-pro{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
