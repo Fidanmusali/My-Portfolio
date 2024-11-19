@@ -1,9 +1,29 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import './App.css';
 import prof from "../public/img/1.jpg"
 import bdu from "../public/img/bdu.png"
+import html from "../public/img/Html.png"
+import css from "../public/img/css.png"
+import github from "../public/img/github.jpg"
+import figma from "../public/img/figma.png"
+import js from "../public/img/js.png"
+import expressjs from "../public/img/expressjs.png"
+import node from "../public/img/node.png"
+import react from "../public/img/react.png"
+import redux from "../public/img/redux.png"
+import tailwind from "../public/img/tailwind.png"
+import next from "../public/img/nextjs.png"
+import mui from "../public/img/mui.png"
+import mongo from "../public/img/mongo.png"
+import marinex from "../public/img/marinex.png"
+import radio from "../public/img/radio.png"
+import pam from "../public/img/pam.png"
+import ch from "../public/img/ch.jpg"
+
 
 import LanguageContext, { LanguageSwicher } from './assets/Lang';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 function App() {
   const homeRef = useRef(null);
@@ -37,6 +57,42 @@ function App() {
 
     requestAnimationFrame(animationScroll);
   };
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const [statusMessage, setStatusMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('/api/contact', formData);
+      if (response.status === 200) {
+        setStatusMessage('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      }
+    } catch (error) {
+      setStatusMessage('There was an error sending your message. Please try again.');
+    }
+  };
+
+
 
   const { language } = useContext(LanguageContext);
   const lang1 = {
@@ -178,6 +234,66 @@ function App() {
     ru: "Aнглийский (B2)",
     en: "English (B2)"
   }
+  const lang27 = {
+    az: "Bacarıqlar",
+    ru: "Навыки",
+    en: "Skills"
+  }
+  const lang28 = {
+    az: "Mən çoxlu təcrübə və bacarıqlar əldə etmişəm, məsələn:",
+    ru: "Я приобрел большой опыт и навыки, такие как:",
+    en: "I have gained a lot of experience and skills, such as:"
+  }
+  const lang29 = {
+    az: "Bacarıqlar",
+    ru: "Навыки",
+    en: "Skills"
+  }
+  const lang30 = {
+    az: "Bacarıqlar",
+    ru: "Навыки",
+    en: "Skills"
+  }
+  const lang31 = {
+    az: "Bacarıqlar",
+    ru: "Навыки",
+    en: "Skills"
+  }
+  const lang32 = {
+    en: "Projects",
+    az: "Layihələr",
+    ru: "Проекты"
+  }
+  const lang33 = {
+    en: "Contact Us",
+    az: "Bizimlə əlaqə saxlayın",
+    ru: "Связаться с нами"
+  }
+  const lang34 = {
+    en: "We would love to hear from you! Feel free to reach out with any questions or feedback.",
+    az: "Fikrinizi eşitmək istərdik! Suallarınız və ya rəyiniz üçün bizimlə əlaqə saxlamaqdan çekinmeyin.",
+    ru: "Мы хотели бы услышать ваше мнение! Не стесняйтесь обращаться к нам с любыми вопросами или отзывами."
+  }
+  const lang35 = {
+    en: "Your Name",
+    az: "Adınız",
+    ru: "Ваше имя"
+  }
+  const lang36 = {
+    en: "Your Email",
+    az: "E-poçtunuz",
+    ru: "Ваш адрес электронной почты"
+  }
+  const lang37 = {
+    en: "Your Message",
+    az: "Mesajınız",
+    ru: "Ваше сообщение"
+  }
+  const lang38 = {
+    en: "Submit",
+    az: "Təqdim et",
+    ru: "подавать"
+  }
   return (
     <div className='port'>
       <nav>
@@ -204,11 +320,14 @@ function App() {
             <p>{lang2[language]}</p>
             <br />
             <div className="p-group">
-              <p><li>{lang3[language]}</li></p>
-              <p><li>{lang4[language]}</li></p>
-              <p><li>{lang5[language]}</li></p>
-              <p><li>{lang6[language]}</li></p>
-              <p><li>{lang7[language]}</li></p>
+              <div className="pg">
+                <p><li>{lang3[language]}</li></p>
+                <p><li>{lang4[language]}</li></p>
+                <p><li>{lang5[language]}</li></p>
+                <p><li>{lang6[language]}</li></p>
+                <p><li>{lang7[language]}</li></p>
+              </div>
+
             </div>
 
           </div>
@@ -276,9 +395,173 @@ function App() {
 
           </div>
         </div>
-        <div ref={skillsRef} className='skills' ></div>
-        <div ref={projectRef} >Projects Section</div>
-        <div ref={contactRef} >Contact Section</div>
+        <div ref={skillsRef} className='skills' >
+          <h2 className='skill-h2'>{lang27[language]}</h2>
+          <p className='skill-p'>{lang28[language]}</p>
+          <div className="skill-grp">
+
+            <div className="s-g1">
+              <img src={html} alt="" />
+              <p>Html</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={css} alt="" />
+              <p>Css</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={js} alt="" />
+              <p>JavaScript</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={react} alt="" />
+              <p>React</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={next} alt="" />
+              <p>Next Js</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={mui} alt="" />
+              <p>Mui</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={tailwind} alt="" />
+              <p>Tailwind</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={node} alt="" />
+              <p>Node Js</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={expressjs} alt="" />
+              <p>Express Js</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={redux} alt="" />
+              <p>Redux Tollkit</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={mongo} alt="" />
+              <p>Mongo DB</p>
+            </div>
+
+            <div className="s-g1">
+              <img src={github} alt="" />
+              <p>Github</p>
+            </div>
+
+          </div>
+        </div>
+        <div ref={projectRef} className='project'>
+          <h2>{lang32[language]}</h2>
+          <div className="project-grp">
+
+            <div className="pro1">
+              <div className="pro-img">
+                <img src={pam} alt="" />
+              </div>
+              <div className="pro-info">
+                <h3>Pam Consulting</h3>
+              </div>
+              <Link to="https://github.com/Fidanmusali/Pam-Consuling">
+                <button className='click-pro'>Lunch</button>
+              </Link>
+            </div>
+
+            <div className="pro1">
+              <div className="pro-img">
+                <img src={radio} alt="" />
+              </div>
+              <div className="pro-info">
+                <h3>Radio</h3>
+              </div>
+              <Link to="https://github.com/Fidanmusali/Radio">
+                <button className='click-pro'>Lunch</button>
+              </Link>
+            </div>
+
+            <div className="pro1">
+              <div className="pro-img">
+                <img src={marinex} alt="" />
+              </div>
+              <div className="pro-info">
+                <h3>Marinex</h3>
+              </div>
+              <Link to="https://github.com/Fidanmusali/Projects/tree/main/Marinex">
+                <button className='click-pro'>Lunch</button>
+              </Link>
+            </div>
+
+            <div className="pro1">
+              <div className="pro-img">
+                <img src={ch} alt="" />
+              </div>
+              <div className="pro-info">
+                <h3>Chic Harmony</h3>
+              </div>
+              <Link to="https://github.com/Fidanmusali/Chic-Harmony">
+                <button className='click-pro a'>Lunch</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="cs">
+          <div ref={contactRef} className='contact-section' >
+            <h2>{lang33[language]}</h2>
+            <p>{lang34[language]}</p>
+            {statusMessage && <p className="status-message">{statusMessage}</p>}
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">{lang35[language]}</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder={lang35[language]}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">{lang36[language]}</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder={lang36[language]}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">{lang37[language]}</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder={lang37[language]}
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" className="submit-btn">{lang38[language]}</button>
+            </form>
+          </div>
+        </div>
+
       </div>
     </div>
   );
