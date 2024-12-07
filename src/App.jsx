@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from 'react';
 import './App.css';
-import prof from "../public/img/1.jpg"
+import prof from "../public/img/fidanp.jpg"
 import bdu from "../public/img/bdu.png"
 import html from "../public/img/Html.png"
 import css from "../public/img/css.png"
@@ -19,6 +19,10 @@ import marinex from "../public/img/marinex.png"
 import radio from "../public/img/radio.png"
 import pam from "../public/img/pam.png"
 import ch from "../public/img/ch.jpg"
+import jet from "../public/img//jet.png"
+import bfc from "../public/img/bfc.jpg"
+import sat from "../public/img/sat.png"
+
 
 
 import LanguageContext, { LanguageSwicher } from './assets/Lang';
@@ -294,6 +298,11 @@ function App() {
     az: "Təqdim et",
     ru: "подавать"
   }
+  const lang39={
+    en:"Keep in touch",
+    az:"Əlaqə saxlayın",
+    ru:"Поддерживать связь"
+  }
   return (
     <div className='port'>
       <nav>
@@ -307,13 +316,26 @@ function App() {
         <div className="l-b">
           <LanguageSwicher />
         </div>
+        <div className="cv">
+          <a href="/public/cv/Fidan Cv Eng.pdf">CV</a>
+        </div>
       </nav>
       <div className="sect">
         <div ref={homeRef} ></div>
         <div ref={aboutRef} className='about' >
           <div className="about1">
-            <h2>{lang1[language]}</h2>
-            <img src={prof} alt="" />
+            <div className="p1">
+              <h2>{lang1[language]}</h2>
+              <img src={prof} alt="" />
+            </div>
+            <div className="p2">
+              <h4>{lang39[language]}</h4>
+              <div className="p2-gr">
+                <Link className='a' to="https://github.com/Fidanmusali"><li>Github: <span color='red'>Fidanmusali</span></li></Link>
+                <Link className='a' mailto="fidanmusali05@gmail.com"><li>Mail: <span color='red'>fidanmusali05@gmail.com</span></li></Link>
+                <Link className='a' to='tel:0553278955'><li>Phone: <span color='red'>055 327 89 85</span></li></Link>
+              </div>
+            </div>
           </div>
           <div className="about2">
             <h3>Fidan Musali</h3>
@@ -349,7 +371,7 @@ function App() {
                 <h4>{lang17[language]}</h4>
                 <p>{lang18[language]}</p>
               </div>
-              <img className='logoimg' src={bdu} alt="" />
+              <img className='logoimg' src={jet} alt="" />
             </div>
 
             <div className="edu1">
@@ -357,7 +379,7 @@ function App() {
                 <h4>{lang19[language]}</h4>
                 <p>{lang20[language]}</p>
               </div>
-              <img className='logoimg' src={bdu} alt="" />
+              <img className='logoimg' src={jet} alt="" />
             </div>
 
             <div className="edu1">
@@ -365,7 +387,7 @@ function App() {
                 <h4>{lang21[language]}</h4>
                 <p>{lang22[language]}</p>
               </div>
-              <img className='logoimg' src={bdu} alt="" />
+              <img className='logoimg' src={jet} alt="" />
             </div>
 
             <p className='other'>{lang23[language]}</p>
@@ -374,7 +396,7 @@ function App() {
                 <h4>BFC</h4>
                 <p>{lang26[language]}</p>
               </div>
-              <img className='logoimg' src={bdu} alt="" />
+              <img className='logoimg' src={bfc} alt="" />
             </div>
 
             <div className="edu1">
@@ -382,7 +404,7 @@ function App() {
                 <h4>Sat Group</h4>
                 <p>{lang24[language]}</p>
               </div>
-              <img className='logoimg' src={bdu} alt="" />
+              <img className='logoimg' src={sat} alt="" />
             </div>
 
             <div className="edu1">
@@ -390,7 +412,7 @@ function App() {
                 <h4>Sat Group</h4>
                 <p>{lang25[language]}</p>
               </div>
-              <img className='logoimg' src={bdu} alt="" />
+              <img className='logoimg' src={sat} alt="" />
             </div>
 
           </div>
