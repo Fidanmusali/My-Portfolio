@@ -333,7 +333,7 @@ function App() {
               <div className="p2-gr">
                 <Link className='a' to="https://github.com/Fidanmusali"><li>Github: <span color='red'>Fidanmusali</span></li></Link>
                 <Link className='a' to="mailto:fidanmusali05@gmail.com"><li>Mail: <span color='red'>fidanmusali05@gmail.com</span></li></Link>
-                <Link className='a' to='tel:0553278955'><li>Phone: <span color='red'>055 327 89 85</span></li></Link>
+                <Link className='a' to='tel:0553278985'><li>Phone: <span color='red'>055 327 89 85</span></li></Link>
               </div>
             </div>
           </div>
