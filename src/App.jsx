@@ -137,7 +137,7 @@ function App() {
 
   const lang7 = {
     en: "I actively seek out new challenges and opportunities to expand my skills, and I’m always open to feedback to become a better developer.",
-    az: "Mən bacarıqlarımı genişləndirmək üçün fəal şəkildə yeni problemlər və imkanlar axtarıram və daha yaxşı inkişaf etdirici olmaq üçün həmişə rəylərə açıram.",
+    az: "Mən bacarıqlarımı genişləndirmək üçün fəal şəkildə yeni problemlər və imkanlar axtarıram və daha yaxşı inkişaf etdirici olmaq üçün həmişə rəylərə açıqam.",
     ru: "Я активно ищу новые задачи и возможности для расширения своих навыков и всегда открыт для обратной связи, чтобы стать лучшим разработчиком."
   }
 
@@ -332,7 +332,7 @@ function App() {
               <h4>{lang39[language]}</h4>
               <div className="p2-gr">
                 <Link className='a' to="https://github.com/Fidanmusali"><li>Github: <span color='red'>Fidanmusali</span></li></Link>
-                <Link className='a' mailto="fidanmusali05@gmail.com"><li>Mail: <span color='red'>fidanmusali05@gmail.com</span></li></Link>
+                <Link className='a' to="mailto:fidanmusali05@gmail.com"><li>Mail: <span color='red'>fidanmusali05@gmail.com</span></li></Link>
                 <Link className='a' to='tel:0553278955'><li>Phone: <span color='red'>055 327 89 85</span></li></Link>
               </div>
             </div>
