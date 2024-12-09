@@ -61,7 +61,6 @@ nav button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* text-align: center; */
   padding-inline: 4rem;
 }
 
@@ -73,7 +72,6 @@ h2 {
   font-weight: 700;
   font-size: 30px;
   color: var(--red);
-  /* padding: 5rem; */
   text-align: center;
 }
 
@@ -88,15 +86,12 @@ h2 {
   border: 2.5px solid var(--red);
   padding: 1.5rem;
   border-radius: 25px;
-
-
 }
 
 .p2 .a {
   border: 2px solid var(--red);
   padding: 1rem;
   border-radius: 20px;
-
   background-color: var(--red);
 }
 
@@ -109,7 +104,6 @@ h2 {
   font-size: 2rem;
   color: var(--red);
   padding-bottom: 1rem;
-
 }
 
 .about1 {
@@ -127,11 +121,9 @@ h2 {
 .cv a {
   text-decoration: none;
   color: black;
-
 }
 
 .cv {
- 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,9 +228,7 @@ h3 {
 .skills {
   margin-top: 5rem;
   background-color: var(--red);
-  /* Dark background for elegance */
   color: #f8f8f2;
-  /* Light text for contrast */
   padding: 3rem;
   border-radius: 15px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -485,4 +475,156 @@ a {
 .cs {
   background-color: var(--red);
   border-radius: 15px;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--yel);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 100px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .port {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sect {
+    margin-left: 0;
+  }
+
+  nav {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    display: none;
+  }
+
+  nav button {
+    width: auto;
+    padding: 0.4rem 1rem;
+  }
+
+  .about1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .p-group {
+    width: 100%;
+  }
+
+  .skills {
+    padding: 2rem;
+  }
+
+  .skill-grp {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .edu1 {
+    width: 22rem;
+  }
+
+  .project-grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .pro1 {
+    width: 20rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-form .form-group {
+    max-width: 20rem;
+  }
+
+  
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .port {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: var(--yel);
+  }
+  .sect {
+    margin-left: 0;
+  }
+
+  nav {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    display: none;
+  }
+
+  nav button {
+    width: auto;
+    padding: 0.4rem 1rem;
+  }
+
+  .about1 {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 5rem;
+  }
+
+  .p-group {
+    width: 100%;
+  }
+
+  .skills {
+    padding: 2rem;
+  }
+
+  .skill-grp {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .edu1 {
+    width: 40rem;
+  }
+
+  .project-grp {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .pro1 {
+    width: 22rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-form .form-group {
+    max-width: 35rem;
+  }
 }
